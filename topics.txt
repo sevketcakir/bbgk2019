@@ -1,0 +1,13 @@
+1)Virtualenv, IPython, Jupyter
+2)Python OOP
+3)PyQt
+4)OpenCV
+5)Pandas
+6)Matplotlib
+7)SQLAlchemy
+8)Pygame
+9)Twisted
+10)Scrapy
+11)Flask/Django
+12)NLTK
+

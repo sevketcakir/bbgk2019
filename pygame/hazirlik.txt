@@ -1,0 +1,3 @@
+https://www.pygame.org/docs/
+http://pygametutorials.wikidot.com/tutorials
+
