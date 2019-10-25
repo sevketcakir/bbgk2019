@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ahmet Nazif Zorlu Fen Lisesi Vigenere Uygulaması</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout" rowstretch="0" columnstretch="0">
+      <item row="0" column="0">
+       <widget class="ScaledLabel" name="resim">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Dosya">
+    <property name="title">
+     <string>&amp;Dosya</string>
+    </property>
+    <addaction name="action_ac"/>
+    <addaction name="action_kameradan_yakala"/>
+    <addaction name="action_farkli_kaydet"/>
+    <addaction name="separator"/>
+    <addaction name="action_cik"/>
+   </widget>
+   <widget class="QMenu" name="menu_ifreleme">
+    <property name="title">
+     <string>Şifreleme</string>
+    </property>
+    <addaction name="action_sifrele"/>
+    <addaction name="action_coz"/>
+   </widget>
+   <addaction name="menu_Dosya"/>
+   <addaction name="menu_ifreleme"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_ac">
+   <property name="text">
+    <string>&amp;Aç</string>
+   </property>
+  </action>
+  <action name="action_cik">
+   <property name="text">
+    <string>Çı&amp;kış</string>
+   </property>
+  </action>
+  <action name="action_sifrele">
+   <property name="text">
+    <string>Şifrele</string>
+   </property>
+  </action>
+  <action name="action_coz">
+   <property name="text">
+    <string>Geri çöz</string>
+   </property>
+  </action>
+  <action name="action_farkli_kaydet">
+   <property name="text">
+    <string>Farklı Ka&amp;ydet</string>
+   </property>
+  </action>
+  <action name="action_kameradan_yakala">
+   <property name="text">
+    <string>&amp;Kameradan yakala</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ScaledLabel</class>
+   <extends>QLabel</extends>
+   <header>scaledlabel</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
