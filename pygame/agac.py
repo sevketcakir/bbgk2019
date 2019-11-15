@@ -8,7 +8,7 @@ class Agac(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.speed = [0, 0]
 
-    def update(self):
+    def update(self, *args):
         if self.rect.left+self.speed[0]>0 and self.rect.right+self.speed[0]<640:
             self.rect = self.rect.move(self.speed[0], 0)
         if self.rect.top+self.speed[1]>0 and self.rect.bottom+self.speed[1]<480:
@@ -21,13 +21,16 @@ class SpaceMan(pygame.sprite.Sprite):
         self.image = self.images[0]
         self.rect = self.image.get_rect()
         self.framecount = 0
+        self.last_time = 0
 
-    def update(self, *args):
-        self.framecount += 1
-        self.image = self.images[(self.framecount//10)%len(self.images)]
+    def update(self, current_time, rate=30):
+        if current_time > self.last_time+rate:
+            self.framecount += 1
+            self.image = self.images[(self.framecount)%len(self.images)]
+            self.last_time = current_time
 
     def load_images(self):
-        data = "data/spaceman/Idle_00"
+        data = "data/spaceman/Kick_00"
         images = []
         for i in range(6):
             images.append(pygame.image.load(data+str(i)+".png"))
@@ -41,8 +44,12 @@ def main():
     background = pygame.image.load('data/bg.png')
     agac=Agac()
     adam = SpaceMan()
+    framerate = pygame.time.Clock()
     surface.blit(background, (0,0))
-    sprites = pygame.sprite.RenderPlain((agac, adam) )
+    #sprites = pygame.sprite.RenderPlain((agac, adam) )
+    group = pygame.sprite.Group()
+    group.add(agac)
+    group.add(adam)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -62,10 +69,15 @@ def main():
                 elif event.key in [pygame.K_UP, pygame.K_DOWN]:
                     agac.speed[1] = 0
 
-        sprites.update()
+        framerate.tick(60)
+        ticks = pygame.time.get_ticks()
+        #sprites.update()
         surface.blit(background, (0,0))
-        sprites.draw(surface)
-        pygame.display.flip()
+        group.update(ticks, 100)
+        group.draw(surface)
+        pygame.display.update()
+        #sprites.draw(surface)
+        #pygame.display.flip()
 
 if __name__=="__main__":
     main()
