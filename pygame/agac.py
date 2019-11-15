@@ -14,6 +14,24 @@ class Agac(pygame.sprite.Sprite):
         if self.rect.top+self.speed[1]>0 and self.rect.bottom+self.speed[1]<480:
             self.rect = self.rect.move(0, self.speed[1])
 
+class SpaceMan(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.images = self.load_images()
+        self.image = self.images[0]
+        self.rect = self.image.get_rect()
+        self.framecount = 0
+
+    def update(self, *args):
+        self.framecount += 1
+        self.image = self.images[(self.framecount//10)%len(self.images)]
+
+    def load_images(self):
+        data = "data/spaceman/Idle_00"
+        images = []
+        for i in range(6):
+            images.append(pygame.image.load(data+str(i)+".png"))
+        return images
 
 
 
@@ -22,8 +40,9 @@ def main():
     surface = pygame.display.set_mode((640, 480))
     background = pygame.image.load('data/bg.png')
     agac=Agac()
+    adam = SpaceMan()
     surface.blit(background, (0,0))
-    sprites = pygame.sprite.RenderPlain((agac) )
+    sprites = pygame.sprite.RenderPlain((agac, adam) )
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
