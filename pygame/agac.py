@@ -6,11 +6,13 @@ class Agac(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load('data/generic/Other Vegetation/tree01.png')
         self.rect = self.image.get_rect()
-        self.speed = 0
-
+        self.speed = [0, 0]
 
     def update(self):
-        self.rect = self.rect.move(self.speed, 0)
+        if self.rect.left+self.speed[0]>0 and self.rect.right+self.speed[0]<640:
+            self.rect = self.rect.move(self.speed[0], 0)
+        if self.rect.top+self.speed[1]>0 and self.rect.bottom+self.speed[1]<480:
+            self.rect = self.rect.move(0, self.speed[1])
 
 
 
@@ -28,13 +30,20 @@ def main():
                 return
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    agac.speed = -5
+                    agac.speed[0] = -5
                 elif event.key == pygame.K_RIGHT:
-                    agac.speed = 5
+                    agac.speed[0] = 5
+                elif event.key == pygame.K_UP:
+                    agac.speed[1] = -5
+                elif event.key == pygame.K_DOWN:
+                    agac.speed[1] = 5
             elif event.type == pygame.KEYUP:
-                if event.key==pygame.K_LEFT or event.key==pygame.K_RIGHT:
-                    agac.speed = 0
+                if event.key in [pygame.K_LEFT, pygame.K_RIGHT]: #==pygame.K_LEFT or event.key==pygame.K_RIGHT:
+                    agac.speed[0] = 0
+                elif event.key in [pygame.K_UP, pygame.K_DOWN]:
+                    agac.speed[1] = 0
 
+        sprites.update()
         surface.blit(background, (0,0))
         sprites.draw(surface)
         pygame.display.flip()
