@@ -60,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pygame/mandelbrot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="289">
               <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -72,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pygame/animatedsprite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="2142">
               <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -138,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1260" />
@@ -152,6 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,42 +160,15 @@
               <item name="bbgk2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="bbgk2019" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bbgk2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbgk2019" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbgk2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbgk2019" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbgk2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbgk2019" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bbgk2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bbgk2019" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PortableGit/bin/git.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -343,8 +317,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="696" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18044515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -585,7 +558,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pygame/mandelbrot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="289">
           <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -595,7 +568,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pygame/animatedsprite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="2142">
           <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
