@@ -43,7 +43,7 @@ pyqt5-tools==5.13.0.1.5
 pyrsistent==0.15.4
 python-dateutil==2.8.0
 python-dotenv==0.10.3
-pywin32==225
+pywin32==301
 pywinpty==0.5.5
 pyzmq==18.1.0
 requests==2.22.0
